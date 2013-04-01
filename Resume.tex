@@ -1,0 +1,198 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+\usepackage{marvosym}
+\usepackage{graphicx}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Joshua Kalpin}}
+
+109 Serene Way\ \ \textbullet
+\ \ Toronto, ON\ \ \textbullet
+\ \ L4J 9A3
+\\
+\Mobilefone (519) 741-7281 \ \textbullet
+\ \ \Letter \href{mailto:jkalpin@uwaterloo.ca}{jkalpin@uwaterloo.ca} \ \textbullet
+\ \ \includegraphics[height=6pt]{Octocat} 
+\href{https://github.com/kapin}{Kapin} \ \textbullet
+\ \ \includegraphics[height=10pt]{twitter} 
+\href{https://twitter.com/jk855}{@jk855}
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{\href{https://www.enflick.com}{Enflick Inc.}}}
+		{\textbf{Waterloo, ON}}
+	\\
+	\headerrow
+		{\emph{Mobile Applications Developer Co-op}}
+		{\emph{December 2012 -- April 2013}}
+	\begin{itemize*}
+		\item Collaborated to complete a complete technical rewrite of the TextNow iOS application in Objective C.
+		\item Designed and developed methods of testing client-side code to significantly increase code coverage.
+		\item Created highly flexible and dynamic user interface elements for use within the app.
+		\item Conducted daily code reviews.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{\href{https://www.work.com}{Salesforce.com - Work.com (Rypple)}}}
+		{\textbf{Toronto, ON}}
+	\\
+	\headerrow
+		{\emph{Ninja Software Developer Co-op}}
+		{\emph{April -- August 2012}}
+	\begin{itemize*}
+		\item Developed both client- and server-side code in Java and SQL using GWT using test-driven development.
+		\item Collaborated on the design and development of front-end and REST APIs for search and notifications.
+		\item Completed UI overhauls on emails and parts of the Work.com application in HTML and CSS.
+		\item Increased overall test coverage on both client- and server-side code by over 10\%.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{\href{https://llts.org}{The Syndicate}}}
+		{\textbf{Toronto, ON}}
+	\\
+	\headerrow
+		{\emph{Writer, Pirates of the Burning Sea}}
+		{\emph{September -- November 2009}}
+	\begin{itemize*}
+		\item Operated within the extremely tight schedule of the project and delivered all assigned work on time.
+		\item Called upon to complete last minute revisions to ensure the product was released to print as scheduled.
+	\end{itemize*}
+	
+	\item
+	\headerrow
+		{\textbf{\href{https://llts.org}{The Syndicate}}}
+		{\textbf{Toronto, ON}}
+	\\
+	\headerrow
+		{\emph{Writer, Warhammer Online}}
+		{\emph{July -- September 2008}}
+	\begin{itemize*}
+		\item Mapped large areas of the Warhammer Online game world.
+		\item Wrote detailed supporting documents to be inserted alongside each map
+	\end{itemize*}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Personal Projects}
+	\begin{indentsection}{\parindent}
+	\hyphenpenalty=1000
+	\begin{description*}
+		\item[This Resume:] This resume is written in \LaTeX with the source code on Github.
+		\item[UW Weather:] An Android weather app that interfaces with the weather station at the University of Waterloo.
+		\item[Simple Dice Roller:] An Android dice application that with both touch and shake control.	
+		\item[Morse Code Translator:] An English to Morse code translator, programmed in Java using Swing, with basic I/O.
+	\end{description*}
+	\end{indentsection}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Proficient Languages:]
+	C, \CPP, Objective-C, Java, XML, HTML, CSS, SQL and \LaTeX
+	\item[Familiar Languages:]
+	C\#, Bash, JavaScript.
+	\item[Frameworks and APIs:]
+	iOS, Android, Swing, GWT, JUnit, Mockito, Hibernate, Spring, Ant and PostgreSQL.
+	\item[Tools:]
+	Windows, OSX, Ubuntu, Eclipse, IntelliJ, Visual Studio, XCode, Vim and Git.
+	\item[Open Source Contributions:]
+	\href{https://mozilla.org}{Firefox}, \href{https://github.com/stuartervine/octotallylazy}{OCTotallyLazy}, \href{https://github.com/CocoaPods/Specs}{Cocoapods Specs}, and \href{https://github.com/rs/sdwebimage}{SDWebImage}
+\end{description*}
+\end{indentsection}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item 
+	\headerrow
+		{\textbf{University of Waterloo}}
+		{\textbf{Waterloo, ON}}
+	\\
+	\headerrow
+		{\emph{Candidate for a Bachelor of Software Engineering (BSE)}}
+		{\emph{2011 -- 2016}}
+	\begin{itemize*}
+		\item GPA: 85.64\%
+		\item President's Scholarship
+		\item Dean's Honour List
+	\end{itemize*}
+		
+	\item 
+	\headerrow
+		{\textbf{William Lyon Mackenzie Collegiate Institute}}
+		{\textbf{North York, ON}}
+	\\
+	\headerrow
+		{\emph{Ontario Secondary School Diploma}}
+		{\emph{2007 -- 2011}}
+		
+	\begin{itemize*}
+		\item GPA: 93\%
+		\item Ontario Scholar's Award
+	\end{itemize*}
+
+\end{itemize}
+
+\end{document}
