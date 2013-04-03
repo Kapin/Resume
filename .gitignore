@@ -17,6 +17,7 @@
 *.log
 *.lot
 *.maf
+*.md~
 *.mtc
 *.mtc0
 *.nav
