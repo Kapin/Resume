@@ -32,3 +32,4 @@
 *.xdy
 *.tdo
 *.db
+.DS_Store
