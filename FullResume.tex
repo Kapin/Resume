@@ -1,0 +1,315 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{tgpagella}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
+\usepackage{marvosym}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+
+\begin{center}
+{\LARGE \textbf{Joshua Kalpin}}
+\vspace{0.1cm}
+
+\Mundus \ \href{http://joshuakalp.in}{joshuakalp.in} \ \textbullet
+\ \ \Letter \ \href{mailto:jkalpin@uwaterloo.ca}{jkalpin@uwaterloo.ca} \ \textbullet
+\ \includegraphics[height=6pt]{Resources/Octocat} 
+\href{https://github.com/kapin}{Kapin} \ \textbullet
+ \includegraphics[height=10pt]{Resources/twitter}
+\href{https://twitter.com/joshkalpin}{@joshkalpin}
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Proficient Languages:]
+	C, \CPP, Ruby, Java, Objective-C, C\#, Python
+	\item[Familiar Languages:]
+	Bash, JavaScript, \LaTeX, MATLAB, SQL
+	\item[Frameworks]:
+	Sinatra, iOS, Web API, UWP, Guava, Guice, Protocol Buffers, HBase, Django
+\end{description*}
+\end{indentsection}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Work Experience}
+
+\begin{itemize}[leftmargin=*]
+	\parskip=0.1em
+	
+	\item[]
+	\headerrow
+		{\textbf{Software Engineering Intern - Analytics and Reporting}}
+		{\textbf{San Francisco, CA}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.squareup.com}{Square}}}
+		{\emph{August 2015 -- December 2015}}
+	\begin{itemize*}
+		\item Developed improvements to Analytics and Reporting infrastructure in Java
+		\item Localized reporting and tax features for Australian merchants
+		\item Developed a new system for creating and updating feature flags
+	\end{itemize*}	
+	
+	\item[]
+	\headerrow
+		{\textbf{SDE Intern - Internet of Things (IoT)}}
+		{\textbf{Redmond, WA}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.microsoft.com}{Microsoft}}}
+		{\emph{January 2015 -- April 2015}}
+	\begin{itemize*}
+		\item Created the "Out of Box Experience" and startup app for Windows 10 IoT Core
+		\item Developed a tool to help port existing Win32 and WinCE applications to Windows 10 IoT Core
+		\item Led the open source development efforts for the IoT Developer Experience team
+		\item Researched and prototyped the required changes needed to bring Node.js to Windows 10 IoT Core
+	\end{itemize*}	
+	
+	\item[]
+	\headerrow
+		{\textbf{SDE Intern - Azure Active Directory (AAD)}}
+		{\textbf{Redmond, WA}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.microsoft.com}{Microsoft}}}
+		{\emph{May 2014 -- August 2014}}
+	\begin{itemize*}
+		\item Developed performance enhancements for the AAD Graph API in C\#
+		\item Re-architected the AAD Graph API to use ASP.NET WebApi instead of WCF DS
+		\item Researched the feasiblity of using an experimental tool to generate client SDKs
+	\end{itemize*}
+	
+	\item[]
+	\headerrow
+		{\textbf{Engineering Intern - iOS}}
+		{\textbf{San Francisco, CA}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.lookout.com}{Lookout Inc.}}}
+		{\emph{August 2013 -- December 2013}}
+	\begin{itemize*}
+		\item Designed a framework to provision iOS devices on specific carrier networks
+		\item Developed a prototype of the iOS RESTful Contact Backup in a 24-hour hackathon
+		\item Hacked the Android emulator to allow for new malware detection capabilities
+	\end{itemize*}
+	
+	\item[]
+	\headerrow
+		{\textbf{Mobile Applications Developer - iOS}}
+		{\textbf{Waterloo, ON}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.enflick.com}{TextNow (formerly Enflick)}}}
+		{\emph{December 2012 -- April 2013}}
+	\begin{itemize*}
+  		\item Completed a technical rewrite and visual redesign of the TextNow iOS application in Objective-C
+		\item Developed highly flexible and dynamic user interfaces for TextNow		
+		\item Designed an automated testing framework to significantly increase iOS test coverage
+  	\end{itemize*}
+  	
+  	\item[]
+	\headerrow
+		{\textbf{Ninja Software Developer}}
+		{\textbf{Toronto, ON}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.work.com}{Salesforce.com - Work.com (formerly Rypple)}}}
+		{\emph{April 2012 -- August 2012}}
+	\begin{itemize*}
+		\item Developed both client- and server-side code in Java using GWT with test-driven development
+			\item Collaborated on the design and development of front-end and REST APIs for search and notifications
+ 	\item Completed UI overhauls on emails and parts of the Work.com application in HTML and CSS
+	\end{itemize*}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Projects}
+	\begin{indentsection}{\parindent}
+	\hyphenpenalty=1000
+	\begin{description*}
+	    \item[\href{https://github.com/SanaMobile/sana.protocol_builder}{Sana Protocol Builder}] A web application for developing medical procedures to use with the Sana Platform
+	    \item[\href{https://github.com/CocoaPods}{CocoaPods:}] Made numerous improvements to the iOS and OS X package manager
+		\item[\href{https://github.com/Kapin/gimgur-server}{Gimgur Server:}] A small Sinatra app that creates Imgur albums when given a list of images
+		\item[\href{https://github.com/Trinovantes/se350-project}{OS WOW:}] A small operating system written for ARM Cortex-M3 designed with a micro-kernel architecture
+	\end{description*}
+	\end{indentsection}
+
+\newpage	
+	
+\begin{center}
+{\LARGE \textbf{Joshua Kalpin}}
+\vspace{0.1cm}
+\end{center}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}[leftmargin=*]
+	\parskip=0.1em
+
+	\item[] 
+	\headerrow
+		{\textbf{University of Waterloo}}
+		{\textbf{Waterloo, ON}}
+	\\
+	\headerrow
+		{\emph{Bachelor of Software Engineering (BSE)}}
+		{\emph{2011 -- 2016}}
+		
+		\begin{itemize*}
+		    \item Overall Average: 86\%
+		    \item Term Dean's Honours: Fall 2011, Spring 2013, Fall 2014
+		    \item Engineering Society Representative, WEEF Representative for Software Engineering
+		    \item Participated in numerous open houses and outreach events for Software Engineering.
+		\end{itemize*}
+        
+        
+        \item[] 
+	\headerrow
+		{\textbf{William Lyon Mackenzie C.I.}}
+		{\textbf{North York, ON}}
+	\\
+	\headerrow
+		{\emph{Ontario Secondary School Diploma}}
+		{\emph{2007 -- 2011}}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Volunteer Experience}
+
+\begin{itemize}[leftmargin=*]
+	\parskip=0.1em
+	
+	\item[]
+	\headerrow
+		{\textbf{Vice-President Education}}
+		{\textbf{Waterloo, ON}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.engsoc.uwaterloo.ca}{Waterloo Engineering Society}}}
+		{\emph{May 2014 -- August 2015}}
+	\begin{itemize*}
+  		\item Repesented the engineering student body on academic and co-op issues at a number of univerisity- and faculty-wide committees
+  		\item Held co-op accountable for repeated delays to the new job application system Waterloo Works
+  		\item Created surveys to gather student opinion on workplace safety, work-term reports, and scheduling
+  		\item Ran the first ever society-run career fair, with hundreds of students in attendance
+  	\end{itemize*}
+  	
+  	\item[]
+	\headerrow
+		{\textbf{Student Services Commissioner}}
+		{\textbf{Waterloo, ON}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.engsoc.uwaterloo.ca}{Waterloo Engineering Society}}}
+		{\emph{January 2014 -- April 2014}}
+	\begin{itemize*}
+  		\item Managed a team of directors to run services and workshops for the society.
+  	\end{itemize*}
+  	
+  	\item[]
+	\headerrow
+		{\textbf{Volunteer/Director}}
+		{\textbf{Waterloo, ON}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.engsoc.uwaterloo.ca}{Waterloo Engineering Society}}}
+		{\emph{January 2012 -- April 2016}}
+	\begin{itemize*}
+  		\item Ran a number events are a director for the society including Resume Critiques, Course Critiques, Charity Bottle Drive and POETS.
+  		\item Participated on the Sponsorship, Engineering Capital Improvements Fund and Teaching Award Committees
+  	\end{itemize*}
+	
+    \item[]
+	\headerrow
+		{\textbf{Orientation Leader}}
+		{\textbf{Waterloo, ON}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.orientation.uwaterloo.ca}{University of Waterloo}}}
+		{\emph{September 2012 -- September 2015}}
+	\begin{itemize*}
+  		\item Participated as a leader in three orientation weeks.
+  		\item "Big" in 2012, "Huge" and Software Director in 2014, and "Edcom" in 2015
+  	\end{itemize*}	
+  	
+  	 \item[]
+	\headerrow
+		{\textbf{Writer/Copy Editor}}
+		{\textbf{Waterloo, ON}}
+	\\
+	\headerrow
+		{\emph{\href{https://www.iwarrior.ca}{The Iron Warrior}}}
+		{\emph{January 2012 -- April 2016}}
+	\begin{itemize*}
+  		\item Wrote many articles and participated in copy editing for the newspaper
+  		\item Won the Iron Pen award for most words written in Fall 2012
+  	\end{itemize*}	
+	
+\end{itemize}
+\hrule
+\vspace{-0.4em}
+\subsection*{Activities and Interests}
+
+\begin{itemize*}
+\item Organizer of SE Hack Day, an event for creating and sharing cool projects
+\item Vice President Education for the Waterloo Engineering Society
+\item Budding audiophile and lover of a wide variety of music; especially progressive rock/metal and classical
+\item Huge science fiction and fantasy nut with favourite authors including Brandon Sanderson and Isaac Asimov
+\end{itemize*}
+\end{document}
